@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vibrant Circles Background with Form</title>
+    <link rel="stylesheet" href="/css/retailer11.css">
+    <link rel="stylesheet" href="/css/form1.css">
+</head>
+<body>
+    <div class="form-container">
+        <h2>Items Sold</h2>
+        <form action="/submit-product-sold" method="post">
+            <label for="customer_id">Customer ID:</label>
+            <input type="text" id="customer_id" name="customer_id" required><br><br>
+
+            <label for="retailer_id">Retailer ID:</label>
+            <input type="text" id="retailer_id" name="retailer_id" required><br><br>
+
+            <label for="item_bought">Item Bought:</label>
+            <input type="text" id="item_bought" name="item_bought" required><br><br>
+
+            <label for="bill_date">Date on Bill:</label>
+            <input type="date" id="bill_date" name="bill_date" required><br><br>
+
+            <label for="Warrenty_date">Validity of Warrenty:</label>
+            <input type="date" id="complaint_date" name="warranty_date" required><br><br>
+
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+</body>
+</html>

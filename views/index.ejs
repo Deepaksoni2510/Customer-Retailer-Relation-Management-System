@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SholShop Welcome Page</title>
+    <link rel="stylesheet" href="/css/index.css">
+</head>
+<body>
+    <div class="container">
+        <div class="welcome-section">
+            <h1>Welcome to SholShop</h1>
+            <p>We are the solution to all your daily general store related problems. Hope we can help you.</p>
+            <h2>THANK YOU</h2>
+        </div>
+        <div class="button-section">
+            <button class="btn login-btn" onclick="goToLogin()">Login</button>
+            <button class="btn register-btn" onclick="goToRegister()">Register</button>
+        </div>
+    </div>
+
+    <script>
+        function goToLogin() {
+            window.location.href = "/login";
+        }
+
+        function goToRegister() {
+            window.location.href = "/register";
+        }
+    </script>
+</body>
+</html>

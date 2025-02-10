@@ -1,0 +1,119 @@
+/* Reset default margins and paddings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #74ebd5, #ACB6E5); /* Soft blue gradient */
+    color: #ffffff;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.dashboard {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100vh; /* Ensure the container takes up full height */
+}
+
+.title {
+    font-size: 3rem;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    animation: fadeIn 2s ease-in-out;
+    color: #ffffff;
+}
+
+.container {
+    display: flex;
+    flex-direction: column; /* Stack options vertically */
+    gap: 20px; /* Space between each box */
+    justify-content: center; /* Center items vertically */
+    align-items: center; /* Center items horizontally */
+    width: 100%;
+    max-width: 400px; /* Max width for the container */
+}
+
+.box {
+    width: 100%;
+    height: 150px;
+    background: rgba(255, 255, 255, 0.2); /* Softer transparent background */
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    backdrop-filter: blur(5px); /* Slight blur effect for a glass-like look */
+}
+
+.box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.box a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.6rem; /* Increased font size */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.box i {
+    font-size: 3.5rem; /* Slightly increased icon size */
+    margin-bottom: 10px;
+    color: #fff; /* White for icons */
+    transition: transform 0.3s;
+}
+
+.box:hover i {
+    transform: scale(1.2);
+}
+
+.box span {
+    font-size: 1.4rem; /* Increased font size for option text */
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+/* Animation for the title */
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(-20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Media query for mobile responsiveness */
+@media (max-width: 768px) {
+    .container {
+        width: 90%; /* Adjust container width for smaller screens */
+    }
+
+    .box {
+        height: 150px;
+    }
+
+    .title {
+        font-size: 2.5rem;
+    }
+
+    .box a {
+        font-size: 1.4rem; /* Adjusted font size for smaller screens */
+    }
+
+    .box span {
+        font-size: 1.2rem; /* Adjusted option text size for smaller screens */
+    }
+}

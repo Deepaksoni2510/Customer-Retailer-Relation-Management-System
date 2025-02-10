@@ -1,0 +1,16 @@
+body {
+    background-color: #8edab6; /* Light sky blue background */
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: radial-gradient(circle at 22% 10%, #00ff88 50px, transparent 50px),
+                      radial-gradient(circle at 90% 30%, #1eff83 70px, transparent 70px),
+                      radial-gradient(circle at 40% 40%, #64ed82 90px, transparent 90px),
+                      radial-gradient(circle at 20% 80%, #41e14e 90px, transparent 90px),
+                      radial-gradient(circle at 80% 70%, #46b481 90px, transparent 90px);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}

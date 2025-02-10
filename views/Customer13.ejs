@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blue Circles Background</title>
+    <link rel="stylesheet" href="/css/Customer11.css">
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse; 
+            margin-top: 20px; 
+        }
+        th, td {
+            border: 1px solid #ddd; 
+            padding: 10px; 
+        }
+        th {
+            background-color: #4CAF50; 
+            color: white; 
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2; 
+        }
+        tr:hover {
+            background-color: #ddd; 
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <div>
+            <h2>Complaints Overview</h2>
+        </div>
+        <thead>
+            <tr>
+                <th>Problem ID</th>
+                <th>Customer ID</th>
+                <th>Item</th>
+                <th>Problem</th>
+                <th>Solution</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% if (status.length > 0) { %>
+                <% status.forEach(statu => { %>
+                    <tr>
+                        <td><%= statu.problem_id %></td>
+                        <td><%= statu.customer_id %></td>
+                        <td><%= statu.item %></td>
+                        <td><%= statu.problem %></td>
+                        <td><%= statu.solution %></td>
+                    </tr>
+                <% }); %>
+            <% } else { %> 
+                <tr>
+                    <td colspan="6">No complaints found.</td>
+                </tr>
+            <% } %>
+        </tbody>
+    </table>
+</body>
+</html>

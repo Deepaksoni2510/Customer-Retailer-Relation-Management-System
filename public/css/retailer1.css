@@ -1,0 +1,112 @@
+/* Reset default margins and paddings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #ff7e5f, #feb47b);
+    color: #ffffff;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Ensure body takes full width and height */
+    width: 100vw;
+    margin: 0;
+}
+
+.dashboard {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+}
+
+.title {
+    font-size: 3rem;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.container {
+    display: flex;
+    flex-direction: column; /* Stack options vertically */
+    gap: 20px;
+    justify-items: center;
+    width: 100%;
+    max-width: 600px; /* Adjust max width for the container */
+    align-items: center; /* Center options horizontally */
+}
+
+.box {
+    width: 100%;
+    max-width: 500px; /* Adjust maximum width for each box */
+    height: 150px;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+}
+
+.box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.box a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.5rem; /* Increased font size */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.box i {
+    font-size: 4rem; /* Increased icon size */
+    margin-bottom: 10px;
+    color: #ffd700;
+    transition: transform 0.3s;
+}
+
+.box:hover i {
+    transform: scale(1.2);
+}
+
+.box span {
+    font-size: 1.4rem; /* Increased text size */
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Animation for the title */
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(-20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Media query for mobile responsiveness */
+@media (max-width: 768px) {
+    .container {
+        grid-template-columns: 1fr; /* 1 column in a row for smaller screens */
+    }
+
+    .box {
+        width: 90%;
+        height: 150px;
+    }
+
+    .title {
+        font-size: 2.5rem;
+    }
+}

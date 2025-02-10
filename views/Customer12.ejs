@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vibrant Circles Background with Form</title>
+    <link rel="stylesheet" href="/css/Customer11.css"> 
+    <link rel="stylesheet" href="/css/form1.css"> 
+<body>
+    <div class="form-container">
+        <h2>Complaint Form</h2>
+        <form action="/submit-complaint" method="post">
+            <label for="customer_id">Customer ID:</label>
+            <br>
+            <input type="text" id="customer_id" name="customer_id" required><br><br>
+
+            <label for="retailer_id">Retailer ID:</label>
+            <br>
+            <input type="text" id="retailer_id" name="retailer_id" required><br><br>
+
+            <label for="item_bought">Item Bought:</label>
+            <br>
+            <input type="text" id="item" name="item" required><br><br>
+
+            <label for="problem">Problem in Item:</label>
+            <br>
+            <textarea id="problem" name="problem" rows="4" required></textarea><br><br>
+
+            <label for="bill_date">Date on Bill:</label>
+            <input type="date" id="bill_date" name="bill_date" required><br><br>
+
+            <label for="complaint_date">Date of Complaint:</label>
+            <input type="date" id="complaint_date" name="complaint_date" required><br><br>
+
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Sold Details</title>
+    <link rel="stylesheet" href="/css/retailer11.css">
+    <link rel="stylesheet" href="/css/form1.css">
+</head>
+<body>
+    <div class="form-container">
+        <h2>Product Sold Details</h2>
+        <% if (typeof purchases !== 'undefined') { %>
+            <% if (purchases && purchases.length > 0) { %>
+                <table border="1">
+                    <tr>
+                        <th>Customer ID</th>
+                        <th>Retailer ID</th>
+                        <th>Item Bought</th>
+                        <th>Date on Bill</th>
+                        <th>Warranty Date</th>
+                    </tr>
+                    <% purchases.forEach(function(purchase) { %>
+                        <tr>
+                            <td><%= purchase.customer_id %></td>
+                            <td><%= purchase.retailer_id %></td>
+                            <td><%= purchase.item_bought %></td>
+                            <td><%= purchase.bill_date %></td>
+                            <td><%= purchase.warranty_date %></td>
+                        </tr>
+                    <% }); %>
+                </table>
+            <% } else { %>
+                <p>No purchases found.</p>
+            <% } %>
+        <% } else { %>
+            <p>Error: Purchases data not available.</p>
+        <% } %>
+    </div>
+    
+</body>
+</html>

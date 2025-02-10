@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animated Login Page</title>
+    <link rel="stylesheet" href="/css/register.css">
+</head>
+<body>
+    <canvas id="backgroundCanvas"></canvas>
+    <div class="content">
+        <h1>Registratiton Page</h1>
+        <div class="login-box">
+            <form action="/register" method="POST">
+                <div class="input-group">
+                    <label for="username"><h2>Name</h2></label>
+                    <input type="text" name="username" id="username" required>
+                </div>
+                <div class="input-group">
+                    <label for="idno"><h2>Identity No.</h2></label>
+                    <input type="text" name="idno" id="idno" required>
+                </div>
+                <div class="input-group">
+                    <label for="password"><h2>Password</h2></label>
+                    <input type="password" name="password" id="password" required>
+                </div>
+                <div class="input-group">
+                    <label for="usertype"><h2>User Type</h2></label>
+                    <select id="usertype" name="usertype">
+                        <option value="None">None</option>
+                        <option value="Retailer">Retailer</option>
+                        <option value="Customer">Customer</option>
+                    </select>
+                </div>
+                <button type="submit">Register</button>
+            </form>
+        </div>
+    </div>
+    <script src="register.js"></script>
+    <script src="/javascript/login1.js"></script>
+</body>
+</html>
